@@ -6,7 +6,7 @@ class BookCard extends Component{
   render() {
 
     return(
-      <Form>
+      <Form onSubmit={this.onSubmit}>
         <Card className="col-lg-4 m-1">
         <Card.Img variant="top" src={this.props.image} onChange={this.onChangeImage}/>
         <Card.Body>
@@ -18,9 +18,7 @@ class BookCard extends Component{
           
           </Card.Text>
           <Button variant="primary" onClick={()=> window.open(this.props.hyperLink, "_blank")}>View in the store</Button>
-          <Button type="submit" className="m-1" variant="primary" onClick={() => {
-                    this.props.saveBook();
-                  }}>Save</Button>
+          <Button type="submit" className="m-1" variant="primary" >Save</Button>
 
         </Card.Body>
       </Card>
