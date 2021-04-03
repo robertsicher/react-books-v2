@@ -3,11 +3,13 @@ import { Card , Button, Form ,  } from 'react-bootstrap';
 
 
 class BookCard extends Component{
+  
   render() {
 
     return(
-      <Form onSubmit={this.onSubmit}>
+      
         <Card className="col-lg-4 m-1">
+        <Form onSubmit={this.onSubmit}>
         <Card.Img variant="top" src={this.props.image} onChange={this.onChangeImage}/>
         <Card.Body>
           <Card.Title onChange={this.onChangeTitle}>{this.props.title}</Card.Title>
@@ -21,8 +23,9 @@ class BookCard extends Component{
           <Button type="submit" className="m-1" variant="primary" >Save</Button>
 
         </Card.Body>
+        </Form>
       </Card>
-      </Form>
+      
     )}
 }
 
